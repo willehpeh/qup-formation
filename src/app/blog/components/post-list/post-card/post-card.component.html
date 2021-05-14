@@ -1,0 +1,7 @@
+<div class="card">
+  <h3 [ngStyle]="getTitleStyles()">{{ post.title }}</h3>
+  <small>{{ post.created | date: 'EEEE, dd MMMM YYYY' }}</small>
+  <p [ngClass]="{ green: post.content.includes('nostrum') }">{{ post.content | shorten }}</p>
+  <button *ngIf="post.title.includes('aut')">Click</button>
+  <a [routerLink]="'/detail/' + post.id">View post</a>
+</div>

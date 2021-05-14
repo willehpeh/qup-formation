@@ -1,0 +1,4 @@
+<h3>{{ todo.title }}</h3>
+<p>{{ todo.todo }}</p>
+<p>{{ todo.created | date: "EEEE  dd : MM : yyyy"}}</p>
+<a [routerLink]="'/todo-single/' + todo.id">go to</a>
